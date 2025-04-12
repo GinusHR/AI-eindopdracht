@@ -11,6 +11,8 @@ const video = document.getElementById("webcam");
 const canvasElement = document.getElementById("output_canvas");
 const canvasCtx = canvasElement.getContext("2d");
 const statusDiv = document.getElementById("status");
+const memeSound = document.getElementById("meme");
+const memeImage = document.getElementById("funny");
 
 const drawUtils = new DrawingUtils(canvasCtx);
 let handLandmarker = undefined;
@@ -24,9 +26,9 @@ function createNeuralNetwork() {
   nn = ml5.neuralNetwork({ task: "classification", debug: true });
 
   const options = {
-    model: "model/model.json",
-    metadata: "model/model_meta.json",
-    weights: "model/model.weights.bin",
+    model: "model2/model.json",
+    metadata: "model2/model_meta.json",
+    weights: "model2/model.weights.bin",
   };
 
   nn.load(options, createHandLandmarker);
@@ -120,6 +122,25 @@ function classifyHand() {
     statusDiv.innerText = `I think this pose is a ${results[0].label}. I am ${
       results[0].confidence.toFixed(2) * 100
     }% sure`;
+    if (results[0].label === "gun") {
+      memeSound.src = "sounds/come-as-u-are.mp3";
+    } else if (results[0].label === "A") {
+      memeSound.src = "sounds/rickroll-but-short.mp3";
+    } else if (results[0].label === "heart") {
+      memeSound.src = "sounds/flashbanggg.mp3";
+    } else if (results[0].label === "four") {
+      memeSound.src = "sounds/if-we-being-real-yeat.mp3";
+    }
+
+    if (results[0].label === "gun") {
+      memeImage.src = "images/kurt.jpeg";
+    } else if (results[0].label === "A") {
+      memeImage.src = "images/rick.jpeg";
+    } else if (results[0].label === "heart") {
+      memeImage.src = "images/conquesting.jpeg";
+    } else if (results[0].label === "four") {
+      memeImage.src = "images/fantastic.jpeg";
+    }
   });
 }
 

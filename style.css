@@ -1,41 +1,52 @@
 body {
-    font-family: sans-serif;
-    margin: 2em;
-    color: #3d3d3d;
-}
-#myimage {
-    position: absolute;
-    width:20px;
-    height:20px;
-    background-color:darkblue;
-    z-index:3;
+  font-family: sans-serif;
+  margin: 2em;
+  color: white;
+  background-color: rgb(113, 113, 113);
 }
 
 p {
-    margin:2px;
+  margin: 2px;
 }
 
 textarea {
-    font-size:0.7em;
+  font-size: 0.7em;
 }
 
 section {
-    margin: 1em 0;
+  margin: 1em 0;
 }
 
 video {
-    display: block;
-    transform: rotateY(180deg);
+  display: block;
+  transform: rotateY(180deg);
+}
+
+button {
+    background-color: thistle;
+    padding: 6px;
+    border-radius: 13px;
 }
 
 .videoView {
-    position: relative;
-    width: 48vw;
+  position: relative;
+  width: 12vw;
 }
 
 #output_canvas {
-    z-index: 1;
-    position: absolute;
-    pointer-events: none;
-    transform: rotateY(180deg);
+  z-index: 1;
+  position: absolute;
+  pointer-events: none;
+  transform: rotateY(180deg);
+}
+
+.mediaView {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+#funny {
+  width: 300px;
+  height: 300px;
 }
