@@ -2,7 +2,10 @@ body {
   font-family: sans-serif;
   margin: 2em;
   color: white;
-  background-color: rgb(113, 113, 113);
+  background-image: linear-gradient(45deg, rgb(177, 176, 176), rgb(53, 40, 40));
+  width: 95vw;
+  height: 92vh; 
+  
 }
 
 p {
@@ -15,6 +18,9 @@ textarea {
 
 section {
   margin: 1em 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 video {
@@ -49,9 +55,15 @@ button {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  margin-top: 3vh;
 }
 
 #funny {
   width: 48vw;
   height: 50vh;
+}
+
+.dDiv {
+  display: flex;
+  justify-content: center;
 }

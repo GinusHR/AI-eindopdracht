@@ -119,10 +119,6 @@ function classifyHand() {
     console.log(`I think this pose is a ${results[0].label}`);
     console.log(`I am ${results[0].confidence.toFixed(2) * 100}% sure`);
 
-    statusDiv.innerText = `I think this pose is a ${results[0].label}. I am ${
-      results[0].confidence.toFixed(2) * 100
-    }% sure`;
-
     memeSound.src = `sounds/${results[0].label}.mp3`;
     memeImage.src = `images/${results[0].label}.jpeg`;
    
