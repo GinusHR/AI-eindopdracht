@@ -23,14 +23,18 @@ video {
 }
 
 button {
-    background-color: thistle;
+    background-color: red;
     padding: 6px;
     border-radius: 13px;
+    border: 2px black solid;
+    color: #fff;
+    font-weight: bold;
+    
 }
 
 .videoView {
   position: relative;
-  width: 12vw;
+  width: 48vw;
 }
 
 #output_canvas {
@@ -43,10 +47,11 @@ button {
 .mediaView {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  align-items: center;
 }
 
 #funny {
-  width: 300px;
-  height: 300px;
+  width: 48vw;
+  height: 50vh;
 }

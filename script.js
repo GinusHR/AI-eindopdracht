@@ -122,25 +122,10 @@ function classifyHand() {
     statusDiv.innerText = `I think this pose is a ${results[0].label}. I am ${
       results[0].confidence.toFixed(2) * 100
     }% sure`;
-    if (results[0].label === "gun") {
-      memeSound.src = "sounds/come-as-u-are.mp3";
-    } else if (results[0].label === "A") {
-      memeSound.src = "sounds/rickroll-but-short.mp3";
-    } else if (results[0].label === "heart") {
-      memeSound.src = "sounds/flashbanggg.mp3";
-    } else if (results[0].label === "four") {
-      memeSound.src = "sounds/if-we-being-real-yeat.mp3";
-    }
 
-    if (results[0].label === "gun") {
-      memeImage.src = "images/kurt.jpeg";
-    } else if (results[0].label === "A") {
-      memeImage.src = "images/rick.jpeg";
-    } else if (results[0].label === "heart") {
-      memeImage.src = "images/conquesting.jpeg";
-    } else if (results[0].label === "four") {
-      memeImage.src = "images/fantastic.jpeg";
-    }
+    memeSound.src = `sounds/${results[0].label}.mp3`;
+    memeImage.src = `images/${results[0].label}.jpeg`;
+   
   });
 }
 
